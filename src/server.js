@@ -17,7 +17,6 @@ mongoose.connect(MONGO_CONNECTION_STRING, {
 });
 
 const db = mongoose.connection;
-
 db.on('error', () => logger.error('MongoDB connection error:')).once(
   'open',
   () => {
